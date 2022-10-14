@@ -9,12 +9,12 @@ describe("testing filter function", function () {
     let countries2 = require("../../data");
     it("filterByString with 'ry' query should output same result length", function () {
         console.log(countries1);
-        const output = (0, filtering_1.default)(countries1, "ry");
+        const output = (0, filtering_1.default)([...countries1], "ry");
         expect(output.length).toEqual(2);
         console.log(output.length);
     });
     it("filterByString with 'xyxx' query should output same result length", function () {
-        const output = (0, filtering_1.default)(countries2, "xx");
+        const output = (0, filtering_1.default)([...countries2], "xx");
         expect(output.length).toEqual(0);
     });
 });
